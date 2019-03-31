@@ -8,9 +8,10 @@ import { MyProfileComponent } from "./my-profile/my-profile.component";
 
 import { MyProfileService } from "./my-profile/my-profile.service";
 import { UsersModule } from './users/users.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
-  declarations: [AppComponent, MyProfileComponent],
+  declarations: [AppComponent, MyProfileComponent, PageNotFoundComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, UsersModule],
   providers: [MyProfileService],
   bootstrap: [AppComponent]
