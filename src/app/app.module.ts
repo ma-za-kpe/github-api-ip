@@ -7,12 +7,12 @@ import { AppComponent } from "./app.component";
 import { MyProfileComponent } from "./my-profile/my-profile.component";
 
 import { MyProfileService } from "./my-profile/my-profile.service";
-import { UsersModule } from './users/users.module';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { UsersModule } from "./users/users.module";
+import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 
 @NgModule({
   declarations: [AppComponent, MyProfileComponent, PageNotFoundComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, UsersModule],
+  imports: [BrowserModule, HttpClientModule, UsersModule, AppRoutingModule],
   providers: [MyProfileService],
   bootstrap: [AppComponent]
 })
