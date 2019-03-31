@@ -7,10 +7,11 @@ import { AppComponent } from "./app.component";
 import { MyProfileComponent } from "./my-profile/my-profile.component";
 
 import { MyProfileService } from "./my-profile/my-profile.service";
+import { UsersModule } from './users/users.module';
 
 @NgModule({
   declarations: [AppComponent, MyProfileComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, UsersModule],
   providers: [MyProfileService],
   bootstrap: [AppComponent]
 })
