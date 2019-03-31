@@ -1,3 +1,19 @@
-<p>
-  my-profile works!
-</p>
+<!-- <ul>
+  <li *ngFor="let p of profile | keyvalue">
+    {{ p.key }} ... {{ p.value }}
+  </li>
+</ul> -->
+
+
+<!-- 
+<ul>
+  <li *ngFor="let p of profile|json ">
+    {{ p }}
+  </li>
+</ul> -->
+
+<p> {{ name }} </p>
+<img src="{{ image }}" alt="" srcset="">
+<ul *ngFor='let repo of profile'>
+  <li> {{repo.name}} </li>
+</ul>

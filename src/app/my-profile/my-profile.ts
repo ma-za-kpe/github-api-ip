@@ -1,11 +1,8 @@
-export interface IMyProfile {
-  username: string;
+export class MyProfile {
+  name: string;
   profilePhoto: string;
-  repositories: [];
-}
-export class MyProfile implements IMyProfile {
-  username: string;
-  profilePhoto: string;
-  repositories;
-  constructor() {}
+  constructor(name: string, profilePhoto: string) {
+    this.name = name;
+    this.profilePhoto = profilePhoto;
+  }
 }

@@ -13,12 +13,6 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    this.http
-      .get(environment.base_url + "/users/ma-za-kpe/repos")
-      .subscribe(data => {
-        // Successful API request.
-        console.log(data);
-      });
     // this.http.get(environment.base_url + "/users").subscribe(data => {
     //   // Successful API request.
     //   console.log(data);
