@@ -7,7 +7,7 @@ export const environment = {
   base_url: "https://api.github.com",
   // user_base_url: "https://api.github.com/users",
   // repo_base_url: "https://api.github.com/repositories",
-  access_token: "9f0dd81ca02648a2b4e8e532692b9d3b28708388"
+  access_token: " 8b952f75ba604e65ba16075f5ac7a887e8e68f1d "
 };
 
 /*

@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
-import { Profile } from "../my-profile/profile";
+import { Router } from "@angular/router";
 
+import { Profile } from "../my-profile/profile";
 import { MyProfileService } from "../my-profile/my-profile.service";
 import { MyProfile } from "./my-profile";
 
@@ -15,7 +16,7 @@ export class MyProfileComponent implements OnInit {
   name;
   image;
 
-  constructor(private mps: MyProfileService) {}
+  constructor(private mps: MyProfileService, private router: Router) {}
 
   ngOnInit() {
     this.getProfile();
@@ -36,6 +37,16 @@ export class MyProfileComponent implements OnInit {
       console.log(repo);
       this.profile = repo;
     });
+  }
+
+  searchUser(name: HTMLInputElement): boolean {
+    console.log(` ${name.value}`);
+    // this.foodTracker.push(
+    //   new FoodTracker(name.value, parseInt(calories.value), details.value)
+    // );
+    name.value = "";
+    this.router.navigateByUrl("/user");
+    return false;
   }
 
   // getProfile() {
