@@ -11,13 +11,26 @@
     {{ p }}
   </li>
 </ul> -->
+<div class="container">
 
-<a routerLink="/user" routerLinkActive="active">SEARCH A USER ON GITHUB</a>
+  <div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <h1>MY PERSONAL PROFILE</h1>
+    </div>
 
-<a routerLink="/repo" routerLinkActive="active">SEARCH A REPO ON GITHUB</a>
 
-<p> {{ name }} </p>
-<img src="{{ image }}" alt="" srcset="">
-<ul *ngFor='let repo of profile'>
-  <li> {{repo.name}} </li>
-</ul>
+    <div class="mt-5 row ">
+      <div class="col-md-6 left">
+        <h1 class="h1"> GITHUB USERNAME: {{ name }} </h1>
+        <img src="{{ image }}" alt="" srcset="">
+      </div>
+      <div class="col-md-6 ">
+        <h2 class="mb-5">CLICK TO SEE MORE DETAILS</h2>
+        <ul *ngFor='let repo of profile'>
+
+          <li> <button type="button" class="repo btn btn-info">{{repo.name}}</button> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

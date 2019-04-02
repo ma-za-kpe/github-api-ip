@@ -1,0 +1,31 @@
+/* A link that has not been visited */
+.link a:link {
+  color: pink;
+}
+
+/* A link that has been visited */
+.link a:visited {
+  color: blue;
+}
+
+/* A link that is hovered on */
+.link a:hover {
+  color: blue;
+}
+
+/* A link that is selected */
+.link a:active {
+  color: green;
+}
+
+.link1 {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.link {
+  padding: 10px;
+  font-size: 20px;
+  background-color: rgb(157, 212, 157);
+  border-radius: 8px;
+}

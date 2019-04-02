@@ -12,9 +12,10 @@ import { MyProfileService } from "./my-profile/my-profile.service";
 import { UsersModule } from "./users/users.module";
 import { ReposModule } from "./repo/repos.module";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
-  declarations: [AppComponent, MyProfileComponent, PageNotFoundComponent],
+  declarations: [AppComponent, MyProfileComponent, PageNotFoundComponent, NavBarComponent],
   imports: [
     BrowserModule,
     HttpClientModule,

@@ -1,20 +1,38 @@
-<!-- search form -->
-<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Github user</label>
-    <input type="text" class="form-control" name="user" #newuser id="githubUser" placeholder="Enter github user">
+<div class="container">
+
+  <div class="mt-5 row ">
+    <div class="col-md-6 m-auto">
+      <!-- search form -->
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Github User</label>
+          <input type="text" class="form-control" name="user" #newuser id="githubUser"
+            placeholder="Enter github repo name">
+        </div>
+        <button type="submit" (click)="searchUser(newuser)" class="btn btn-primary">Submit</button>
+      </form>
+      <!-- search form  -->
+    </div>
   </div>
-  <button type="submit" (click)="searchUser(newuser)" class="btn btn-primary">Submit</button>
-</form>
-<!-- search form  -->
 
 
+  <div class="mt-5 row ">
+    <div class="col-md-6 ">
+      <h2 class="mb-5">USER RESULTS</h2>
+      <h3 class="h3"> GITHUB NAME: {{ name }} </h3>
+      <h3 class="h3"> GITHUB URL: {{url}} </h3>
+      <img src="{{ image }}" alt="" srcset="">
 
-<p> {{name}} </p>
-<p> {{url}} </p>
-<img src="{{ image }}" alt="" srcset="">
-<ul *ngFor='let user of users'>
-  <a href="{{user.html_url}}">
-    <li> {{user.name}} </li>
-  </a>
-</ul>
+    </div>
+    <h2 class="mb-5">REPO RESULTS</h2>
+
+    <div class="col-md-6 ">
+
+      <ul *ngFor='let user of users'>
+        <a href="{{user.html_url}}">
+          <li> <button type="button" class="repo btn btn-info">{{user.name}}</button> </li>
+        </a>
+      </ul>
+    </div>
+  </div>
+</div>
