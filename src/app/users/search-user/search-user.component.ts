@@ -1,12 +1,9 @@
 import { Component, OnInit } from "@angular/core";
-import { environment } from "../../../environments/environment";
 import { HttpClient } from "@angular/common/http";
 
 import { UsersService } from "../../users/users.service";
 import { Users } from "../users";
-import { MyProfileComponent } from "../../my-profile/my-profile.component";
 import { Router } from "@angular/router";
-import { NgxNavigationWithDataComponent } from "ngx-navigation-with-data";
 
 @Component({
   selector: "app-search-user",
@@ -14,10 +11,10 @@ import { NgxNavigationWithDataComponent } from "ngx-navigation-with-data";
   styleUrls: ["./search-user.component.css"]
 })
 export class SearchUserComponent implements OnInit {
-  name: Users;
-  title = "hi";
-  public Client_ID = "485a827e471b486920c7";
-  public Client_Secret = "d2e17ac3e482e02b0bcd938f0f333a96710bc4ab";
+  users: Users[];
+  name;
+  image;
+  url;
 
   constructor(
     private http: HttpClient,
@@ -32,7 +29,29 @@ export class SearchUserComponent implements OnInit {
 
     this.us.getUsers(name.value).subscribe(d => {
       console.log(d);
+      console.log(Object.values(d));
+      var x = Object.values(d).map(xx => {
+        console.log(xx[0]);
+        return xx[0];
+      });
+      console.log(x[2]);
+
+      var result = Object.keys(x[2]).map(function(key) {
+        return [String(key), x[2][key]];
+      });
+
+      console.log(result);
+      console.log(result[0][1]);
+
+      console.log(result[3][1]);
+      console.log(result[5][1]);
+
+      this.name = result[0][1];
+      this.image = result[3][1];
+      this.url = result[5][1];
+      // this.users = d.items;
     });
+
     return false;
   }
 }

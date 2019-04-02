@@ -18,7 +18,6 @@ export class MyProfileComponent implements OnInit {
   profile: Profile;
   name;
   image;
-  users: Users[];
 
   constructor(
     private mps: MyProfileService,

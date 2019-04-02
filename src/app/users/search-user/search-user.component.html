@@ -7,3 +7,16 @@
   <button type="submit" (click)="searchUser(newuser)" class="btn btn-primary">Submit</button>
 </form>
 <!-- search form  -->
+
+
+<ul *ngFor='let user of users'>
+  <li> {{users}} </li>
+</ul>
+
+
+<p> {{name}} </p>
+<p> {{url}} </p>
+<img src="{{ image }}" alt="" srcset="">
+<!-- <ul *ngFor='let repo of profile'>
+  <li> {{repo.name}} </li>
+</ul> -->
