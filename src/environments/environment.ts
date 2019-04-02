@@ -5,8 +5,6 @@
 export const environment = {
   production: false,
   base_url: "https://api.github.com"
-  // user_base_url: "https://api.github.com/users",
-  // repo_base_url: "https://api.github.com/repositories",
 };
 
 /*
