@@ -1,12 +1,12 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
-import { SearchUserComponent } from "./search-user/search-user.component";
+import { SearchRepoComponent } from "./search-repo/search-repo.component";
 
-const routes: Routes = [{ path: "user", component: SearchUserComponent }];
+const routes: Routes = [{ path: "repo", component: SearchRepoComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class UsersRoutingModule {}
+export class ReposRoutingModule {}

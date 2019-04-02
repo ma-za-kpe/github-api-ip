@@ -1,11 +1,11 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
-import { UsersRoutingModule } from "./users-routing.module";
-import { SearchUserComponent } from "./search-user/search-user.component";
+import { ReposRoutingModule } from "./repos-routing.module";
+import { SearchRepoComponent } from "./search-repo/search-repo.component";
 
 @NgModule({
-  declarations: [SearchUserComponent],
-  imports: [CommonModule, UsersRoutingModule]
+  declarations: [SearchRepoComponent],
+  imports: [CommonModule, ReposRoutingModule]
 })
-export class UsersModule {}
+export class ReposModule {}

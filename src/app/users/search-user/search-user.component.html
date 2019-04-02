@@ -13,6 +13,8 @@
 <p> {{name}} </p>
 <p> {{url}} </p>
 <img src="{{ image }}" alt="" srcset="">
-<ul *ngFor='let repo of users'>
-  <li> {{repo.name}} </li>
+<ul *ngFor='let user of users'>
+  <a href="{{user.html_url}}">
+    <li> {{user.name}} </li>
+  </a>
 </ul>
