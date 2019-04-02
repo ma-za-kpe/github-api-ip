@@ -4,6 +4,9 @@ import { Router } from "@angular/router";
 import { Profile } from "../my-profile/profile";
 import { MyProfileService } from "../my-profile/my-profile.service";
 import { MyProfile } from "./my-profile";
+import { NgxNavigationWithDataComponent } from "ngx-navigation-with-data";
+import { Users } from "../users/users";
+import { UsersModule } from "../users/users.module";
 
 @Component({
   selector: "app-my-profile",
@@ -15,8 +18,13 @@ export class MyProfileComponent implements OnInit {
   profile: Profile;
   name;
   image;
+  users: Users[];
 
-  constructor(private mps: MyProfileService, private router: Router) {}
+  constructor(
+    private mps: MyProfileService,
+    private router: Router,
+    public navCtrl: NgxNavigationWithDataComponent
+  ) {}
 
   ngOnInit() {
     this.getProfile();
@@ -37,16 +45,6 @@ export class MyProfileComponent implements OnInit {
       console.log(repo);
       this.profile = repo;
     });
-  }
-
-  searchUser(name: HTMLInputElement): boolean {
-    console.log(` ${name.value}`);
-    // this.foodTracker.push(
-    //   new FoodTracker(name.value, parseInt(calories.value), details.value)
-    // );
-    name.value = "";
-    this.router.navigateByUrl("/user");
-    return false;
   }
 
   // getProfile() {

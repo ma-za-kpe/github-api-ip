@@ -1,6 +1,8 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
+import { NgxNavigationWithDataComponent } from "ngx-navigation-with-data";
+import "angular2-navigate-with-data";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -13,7 +15,7 @@ import { PageNotFoundComponent } from "./page-not-found/page-not-found.component
 @NgModule({
   declarations: [AppComponent, MyProfileComponent, PageNotFoundComponent],
   imports: [BrowserModule, HttpClientModule, UsersModule, AppRoutingModule],
-  providers: [MyProfileService],
+  providers: [MyProfileService, NgxNavigationWithDataComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -1,3 +1,9 @@
-<p>
-  search-user works!
-</p>
+<!-- search form -->
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Github user</label>
+    <input type="text" class="form-control" name="user" #newuser id="githubUser" placeholder="Enter github user">
+  </div>
+  <button type="submit" (click)="searchUser(newuser)" class="btn btn-primary">Submit</button>
+</form>
+<!-- search form  -->

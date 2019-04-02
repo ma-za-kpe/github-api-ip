@@ -18,7 +18,7 @@ export class MyProfileService {
 
   constructor(private http: HttpClient) {}
 
-  //get nae and avatar and list of repos
+  //get name and avatar and list of repos
   getMyProfile(): Observable<Profile> {
     return this.http.get<Profile>(
       "https://api.github.com/users/ma-za-kpe?" +
@@ -33,6 +33,19 @@ export class MyProfileService {
   getMyRepoList(): Observable<Profile> {
     return this.http.get<Profile>(
       "https://api.github.com/users/ma-za-kpe/repos?" +
+        environment.access_token +
+        this.Client_ID +
+        "&" +
+        this.Client_Secret
+    );
+  }
+
+  dataFromService;
+
+  //get name and avatar and list of repos
+  searchUser(): Observable<Profile> {
+    return this.http.get<Profile>(
+      "https://api.github.com/users/ma-za-kpe?" +
         environment.access_token +
         this.Client_ID +
         "&" +

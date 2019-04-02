@@ -12,7 +12,7 @@ export class UsersService {
   constructor(private http: HttpClient) {}
 
   //get nae and avatar and list of repos
-  getMyProfile(): Observable<Users> {
+  getUser(): Observable<Users> {
     return this.http.get<Users>("https://api.github.com/search/users");
   }
 }
