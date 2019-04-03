@@ -11,19 +11,16 @@ import { Observable } from "rxjs";
 export class ReposService {
   user: Repos[];
   public username: string;
-  public Client_ID = "485a827e471b486920c7";
-  public Client_Secret = "d2e17ac3e482e02b0bcd938f0f333a96710bc4ab";
-  public access_token: " 8b952f75ba604e65ba16075f5ac7a887e8e68f1d ";
 
   constructor(private http: HttpClient) {}
 
   getUsers(name: string): Observable<Repos[]> {
     return this.http.get<Repos[]>(
       `https://api.github.com/search/users?q=${name}&per_page=100` +
-        this.access_token +
-        this.Client_ID +
+        environment.access_token +
+        environment.Client_ID +
         `&` +
-        this.Client_Secret
+        environment.Client_Secret
     );
   }
 
@@ -31,10 +28,10 @@ export class ReposService {
   getMyRepoList(name: string): Observable<Repos[]> {
     return this.http.get<Repos[]>(
       `https://api.github.com/users/${name}/repos?` +
-        this.access_token +
-        this.Client_ID +
+        environment.access_token +
+        environment.Client_ID +
         `&` +
-        this.Client_Secret
+        environment.Client_Secret
     );
   }
 }
