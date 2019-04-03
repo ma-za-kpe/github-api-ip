@@ -13,9 +13,11 @@ import { UsersModule } from "./users/users.module";
 import { ReposModule } from "./repo/repos.module";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { UnderlineDirective } from './underline.directive';
+import { SortPipe } from './sort.pipe';
 
 @NgModule({
-  declarations: [AppComponent, MyProfileComponent, PageNotFoundComponent, NavBarComponent],
+  declarations: [AppComponent, MyProfileComponent, PageNotFoundComponent, NavBarComponent, UnderlineDirective, SortPipe],
   imports: [
     BrowserModule,
     HttpClientModule,
