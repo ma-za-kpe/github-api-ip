@@ -1,5 +1,22 @@
 # GithubSearch
 
+#Project Author
+
+- MAKU PAULINE MAZAKPE
+
+## PROJECT DESCRIPTION
+
+-A website where users may enter a GitHub username into a form, submit it, and see names and descriptions of that person's public repositories. A person can also look for repositories. You also get to view my personal profile
+
+### INSTALLATION INSTRUCTION
+
+1. npm install
+2. ng serve -o
+
+### Live Link
+
+- https://ma-za-kpe.github.io/github-api-ip/myProfile
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
 
 ## Development server
